@@ -1,4 +1,4 @@
-package handson.problems;
+package handson.problems.arrays;
 
 public class FizzBizz {
 
