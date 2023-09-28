@@ -13,16 +13,16 @@ public class ReverseOfAString {
 	}
 
 	private static void reverseUsingStringBuffer(String inputStr) {
-		StringBuffer strBuff = new StringBuffer(inputStr);
+		StringBuilder strBuff = new StringBuilder(inputStr);
 		System.out.println(
 				"Reverse of string using StringBuffer(): inputStr=> " + inputStr + "\t Output=> " + strBuff.reverse());
 	}
 
 	private static void reverseUsingLoop(String inputStr) {
 
-		String reverseStr = "";
+		StringBuilder reverseStr = new StringBuilder();
 		for (int i = inputStr.length() - 1; i >= 0; i--) {
-			reverseStr += inputStr.charAt(i);
+			reverseStr.append(inputStr.charAt(i));
 		}
 
 		System.out.println("Reverse of string using for Loop: inputStr=> " + inputStr + "\t Output=> " + reverseStr);
