@@ -4,11 +4,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FactoryMeathodsUnmodifiableMap {
+public class FactoryMethodsUnmodifiableMap {
 
 	public static void main(String[] args) {
 
-		
 		Map<String, Integer> originalMap = new HashMap<>();
 		originalMap.put("Shashank", 15);
 		originalMap.put("Akanksha", 14);
