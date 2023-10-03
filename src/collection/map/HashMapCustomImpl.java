@@ -4,10 +4,7 @@ public class HashMapCustomImpl<K, V> {
 
 	private int capacity = 16;
 	private Entry[] bucket;
-	
-	
-	
-	
+
 	public HashMapCustomImpl() {
 		this.bucket = new Entry[capacity];
 	}
@@ -29,12 +26,12 @@ public class HashMapCustomImpl<K, V> {
 		// And if key != null and if(bucket[bucketIndex] == null), that means no Entry is present there. Insert a new entry rightAway 
 		int bucketIndex = calculateHash(key);
 		if(bucket[bucketIndex] == null) {
-			bucket[bucketIndex] = new Entry<K, V>(key, value, null);
+			bucket[bucketIndex] = new Entry<>(key, value, null);
 		}else {
 			// Now, This scope means that we have a collision 
 			// A Entry should be added at the end or existing Entry should be override
 			
-			Entry<K, V> newEntry = new Entry<K, V>(key, value, null); 
+			Entry<K, V> newEntry = new Entry<>(key, value, null);
 			Entry<K, V> currentNode = bucket[bucketIndex];		// get Hold of currentNode
 			Entry<K, V> previousNode = currentNode;
 			

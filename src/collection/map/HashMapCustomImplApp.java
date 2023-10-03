@@ -1,7 +1,5 @@
-package datastructures.testdscustomapis;
+package collection.map;
 
-import collection.map.HashMapCustomImpl;
-import datastructures.basics.BasicHashMapWithLListBucket;
 
 public class HashMapCustomImplApp {
 	public static void main(String[] args) {
