@@ -1,10 +1,9 @@
-package datastructures.testdscustomapis;
+package datastructures.stack;
 
-import datastructures.basics.ListStack;
 import datastructures.contracts.Stack;
 
-public class CardListStackApp {
-	Stack<String> stack = new ListStack<String>();
+public class CardStackApp {
+	Stack<String> stack = new BasicStack<>();
 
 	public static void main(String[] args) {
 		CardStackApp app = new CardStackApp();

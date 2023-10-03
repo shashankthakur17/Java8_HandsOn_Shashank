@@ -1,36 +1,37 @@
-package datastructures.testdscustomapis;
+package datastructures.stack;
 
-import datastructures.basics.BasicStack;
 import datastructures.contracts.Stack;
 
-public class CardStackApp {
-	Stack<String> stack = new BasicStack<String>();
+public class CardListStackApp {
 
 	public static void main(String[] args) {
-		CardStackApp app = new CardStackApp();
-		app.stackCards();
-		app.unstackCards();
+
+		Stack<String> stackOfCards = stackCards();
+
+		unstackCards(stackOfCards);
 		
 		//restack cards
-		app.stackCards();
+		Stack<String> reStackedCards = stackCards();
 		
 		//how many cards are on the deck
-		app.desckSize();
+		desckSize(reStackedCards);
 		
 		//do we have queen of hearts in the deck
-		app.containsCard("Queen of Hearts");
+		containsCard(reStackedCards, "Queen of Hearts");
 
 		//do we have a joker
-		app.containsCard("Joker");
+		containsCard(reStackedCards, "Joker");
 
 		//go to the king of diamonds
-		app.goToCard("King of Diamonds");
+		goToCard(reStackedCards, "King of Diamonds");
 
 		//now how many cards are on the deck
-		app.desckSize();
+		desckSize(reStackedCards);
 }
 
-	public void stackCards() {		
+	public static Stack stackCards() {
+
+		Stack<String> stack = new ListStack<>();
 		//stack the spade suit
 		stack.push("Ace of Spades");
 		stack.push("2 of Spades");
@@ -90,24 +91,26 @@ public class CardStackApp {
 		stack.push("Jack of Hearts");
 		stack.push("Queen of Hearts");
 		stack.push("King of Hearts");
+
+		return stack;
 	}
 	
-	public void unstackCards() {			
+	public static void unstackCards(Stack<String> stack) {
 		//now pull the cards off the stack and print them
 		while(stack.size() > 0) {
 			System.out.println(stack.pop());
 		}
 	}
 
-	public void containsCard(String card) {			
-		System.out.println(stack.contains(card));
+	public static void containsCard(Stack<String> stack, String card) {
+		System.out.println("Does Deck contains " + card + " = " + stack.contains(card));
 	}
 
-	public void goToCard(String card) {			
-		System.out.println(stack.access(card));
+	public static void goToCard(Stack<String> stack, String card) {
+		System.out.println("get card " + stack.access(card));
 	}
 
-	public void desckSize() {			
-		System.out.println(stack.size());
+	public static void desckSize(Stack<String> stack) {
+		System.out.println("how many cards are on the deck = " + stack.size());
 	}
 }
