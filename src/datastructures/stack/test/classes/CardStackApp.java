@@ -1,6 +1,7 @@
-package datastructures.stack;
+package datastructures.stack.test.classes;
 
 import datastructures.contracts.Stack;
+import datastructures.stack.BasicStack;
 
 public class CardStackApp {
 	Stack<String> stack = new BasicStack<>();

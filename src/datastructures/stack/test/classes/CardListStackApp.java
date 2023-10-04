@@ -1,6 +1,7 @@
-package datastructures.stack;
+package datastructures.stack.test.classes;
 
 import datastructures.contracts.Stack;
+import datastructures.stack.ListStack;
 
 public class CardListStackApp {
 
@@ -29,7 +30,7 @@ public class CardListStackApp {
 		desckSize(reStackedCards);
 }
 
-	public static Stack stackCards() {
+	public static Stack<String> stackCards() {
 
 		Stack<String> stack = new ListStack<>();
 		//stack the spade suit

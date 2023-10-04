@@ -1,4 +1,4 @@
-package datastructures.basics;
+package datastructures.queue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class ListQueue<X> implements Queue<X> {
 	private int end;
 
 	public ListQueue() {
-		data = new ArrayList<X>();
+		data = new ArrayList<>();
 		front = -1;
 		end = -1;
 	}
@@ -32,7 +32,7 @@ public class ListQueue<X> implements Queue<X> {
 
 	@Override
 	public X deQueue() {
-		X tempItem = null;
+		X tempItem;
 		if(size()==0) {
 			throw new IllegalStateException("The queue has no elements to Dequeue !");
 		}

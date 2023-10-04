@@ -1,4 +1,4 @@
-package datastructures.basics;
+package datastructures.queue;
 
 import datastructures.contracts.Queue;
 
@@ -9,7 +9,7 @@ public class BasicQueue<X> implements Queue<X> {
 	private int end;
 
 	public BasicQueue() {
-		this(100);
+		this(30);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -51,7 +51,7 @@ public class BasicQueue<X> implements Queue<X> {
 
 // dequeue or delete method
 	public X deQueue() {
-		X tempItem = null;
+		X tempItem;
 		// if size is 0, means there is no item in the queue for dequeue
 		if (size() == 0) {
 			throw new IllegalStateException("The queue is already empty !");
