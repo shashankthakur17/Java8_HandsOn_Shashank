@@ -1,4 +1,4 @@
-package nonprimitive.datatype.string;
+package corejava.string;
 
 public class FirstRepeatationOfAChar {
 

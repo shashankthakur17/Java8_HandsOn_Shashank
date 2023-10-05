@@ -1,21 +1,21 @@
-package nonprimitive.datatype.string;
+package corejava.string;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class FirstNonDuplicateCharOfString {
+public class FindDuplicateCharInString {
 
 	public static void main(String[] args) {
 
-		String inputStr = "hqghumeaylnlfdxfircvscxggbwkfnqduxwfnfozvs";
+		String inputStr = "geeksforgeeks";
 
 		printDuplicateChars(inputStr);
 	}
 
 	private static void printDuplicateChars(String inputStr) {
 
-		Map<Character, Integer> charCountMap = new LinkedHashMap<>();
+		Map<Character, Integer> charCountMap = new HashMap<>();
 
 		for (int i = 0; i < inputStr.length(); i++) {
 			char c = inputStr.charAt(i);
@@ -29,10 +29,8 @@ public class FirstNonDuplicateCharOfString {
 		// now traverse and print only the duplicates
 		Set<Character> charKeySet = charCountMap.keySet();
 		for (char c : charKeySet) {
-			if (charCountMap.get(c).equals(1))
-				{System.out.println("First NonDuplicate character: " + c + "\t Frequency: " + charCountMap.get(c));
-				break;}
-			
+			if (charCountMap.get(c) > 1)
+				System.out.println("Duplicate character: " + c + "\t Frequency: " + charCountMap.get(c));
 		}
 	}
 

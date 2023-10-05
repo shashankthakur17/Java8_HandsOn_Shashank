@@ -1,4 +1,4 @@
-package nonprimitive.datatype.string;
+package corejava.string;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ public class AnagramOfTwoStringUsingMap {
 	/*
 	 * An anagram of a string is another string that contains the same characters,
 	 * only the order of characters can be different.
-	 * For example, “abcd” and “dabc” are an Anagram of each other.
+	 * For example, ï¿½abcdï¿½ and ï¿½dabcï¿½ are an Anagram of each other.
 	 */
 	public static void main(String[] args) {
 
@@ -22,8 +22,8 @@ public class AnagramOfTwoStringUsingMap {
 		char[] inputStr1 = s1.toCharArray();
 		char[] inputStr2 = s2.toCharArray();
 		
-		Map<Character, Integer> hm1 = new HashMap<Character, Integer>();
-		Map<Character, Integer> hm2 = new HashMap<Character, Integer>();
+		Map<Character, Integer> hm1 = new HashMap<>();
+		Map<Character, Integer> hm2 = new HashMap<>();
 
 		// for inputStr1
 		for (int i = 0; i < inputStr1.length; i++) {
