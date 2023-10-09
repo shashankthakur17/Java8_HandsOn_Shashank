@@ -18,14 +18,14 @@ public class LongestSubstringWithUniqueChar {
     public static int lengthOfLongestSubstring(String s) {
         int maxLength = 0, i = 0, j = 0;
         Set<Character> setUniqueChar = new HashSet<>();
-        while (j < s.length()) {
-            if (!setUniqueChar.contains(s.charAt(j))) {
-                setUniqueChar.add(s.charAt(j));
-                j++;
-                maxLength = Math.max(maxLength, j - i);
-            } else {
-                setUniqueChar.remove(s.charAt(i));
+        while (i < s.length()) {
+            if (!setUniqueChar.contains(s.charAt(i))) {
+                setUniqueChar.add(s.charAt(i));
                 i++;
+                maxLength = Math.max(maxLength, i - j);
+            } else {
+                setUniqueChar.remove(s.charAt(j));
+                j++;
             }
         }
         return maxLength;
